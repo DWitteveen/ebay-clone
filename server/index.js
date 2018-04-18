@@ -47,19 +47,20 @@ const Product = sequelize.define('forsale', {
 
 //get all products
 
-app.get('/forsale'), (req, res) => {
+app.get('/forsale', (req, res) => {
   Product.findAll({
-    attributes: ['id', 'name', 'price', 'description', 'email', 'phonenumber']
+    attributes: ['id', 'title', 'price', 'description', 'email', 'phonenumber']
   })
   .then(result => {
     res.send({
-      products: result
+      forsale: result
     })
   })
+  //return error if something went wrong
     .catch(err => {
     res.status(500).send({error: 'ERROR!!!1!1!'})
   })
-}
+})
 
 
 //testing API connection
