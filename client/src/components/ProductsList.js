@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {fetchAllProducts} from '../actions/products'
 // import {Link} from 'react-router-dom'
 import ProductForm from './ProductForm'
+import './style.css'
 
 
 //class create
@@ -28,12 +29,13 @@ class ProductsList extends PureComponent {
   render() {
     const {products} = this.props
     return (
-      <div>
-        <h1>All Adds</h1>
+      <div className="div">
+        <h1>Ebay-clone</h1>
+        <h2>All Adds</h2>
 
 
 
-        <table>
+        <table className = "table">
           <thead>
             <tr>
               <th>Number</th>
@@ -53,8 +55,8 @@ class ProductsList extends PureComponent {
 				</table>
 
         <h1>Add Items</h1>
-        <form>add items </form>
-        <ProductForm />
+        <form>Insert product information: </form>
+        <ProductForm classname="form"/>
 
       </div>
     )
