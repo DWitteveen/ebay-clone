@@ -7,7 +7,7 @@ import ProductForm from './ProductForm'
 import './style.css'
 
 
-//class create
+//class create plus provider??
 class ProductsList extends PureComponent {
   static propTypes = {
     products: PropTypes.arrayOf(PropTypes.shape({
@@ -56,13 +56,14 @@ class ProductsList extends PureComponent {
 
         <h1>Add Items</h1>
         <form>Insert product information: </form>
-        <ProductForm classname="form"/>
+        <br />
+        <ProductForm />
 
       </div>
     )
   }
 }
-
+//tying to add an onlick event to the button
 
 const mapStateToProps = function (state) {
   return {

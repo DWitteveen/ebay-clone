@@ -14,3 +14,5 @@ const enhancer = compose(
 const store = createStore(reducer, enhancer)
 
 export default store
+
+//all applications states

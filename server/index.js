@@ -62,6 +62,15 @@ app.get('/forsale', (req, res) => {
   })
 })
 
+app.post('/products', (req, res) => {
+  const product = req.body
+  console.log(product)
+
+  Product.create(product).then(entity => {
+
+    res.status(201).send(entity)
+  })
+})
 
 //testing API connection
-Product.findById(1).then(forsale => console.log(JSON.stringify(forsale)))
+// Product.findById(1).then(forsale => console.log(JSON.stringify(forsale)))

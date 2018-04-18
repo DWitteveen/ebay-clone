@@ -1,6 +1,6 @@
 body {
   background: #282827;/* match border color */
-  text-align: 
+  text-align:
 }
 
 .div {
@@ -21,7 +21,8 @@ tr {
 
 }
 
-.form {
-  background-color: #999;
-  color: black;
+.forminput {
+  font: 15px 'Arial Narrow';
+  color: #fefefe;
+
 }
