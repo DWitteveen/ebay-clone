@@ -1,4 +1,15 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
-import {fetchProduct, updateProduct} from '../actions/products'
-import ProductForm from './ProductForm'
+
+class ProductDetails extends PureComponent {
+  render() {
+    const {product} = this.props
+    return (
+      <div>
+        <h1>{ product.name }</h1>
+      </div>
+    )
+  }
+}
+
+export default ProductDetails
